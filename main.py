@@ -46,7 +46,7 @@ class CoffeeApp(QMainWindow):
     def add_coffee(self):
         self.form = AddEditCoffeeForm()
         self.form.show()
-        self.form.saveButton.clicked.connect(self.save_coffee)
+        self.form.saveButton.clicked.connect(lambda: self.save_coffee())
         self.form.cancelButton.clicked.connect(self.form.close)
 
     def edit_coffee(self):
