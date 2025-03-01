@@ -1,0 +1,47 @@
+from PyQt6 import QtCore, QtWidgets
+
+class Ui_AddEditCoffeeForm(object):
+    def setupUi(self, AddEditCoffeeForm):
+        AddEditCoffeeForm.setObjectName("AddEditCoffeeForm")
+        AddEditCoffeeForm.resize(400, 300)
+        self.verticalLayout = QtWidgets.QVBoxLayout(AddEditCoffeeForm)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.nameEdit = QtWidgets.QLineEdit(AddEditCoffeeForm)
+        self.nameEdit.setPlaceholderText("Название сорта")
+        self.nameEdit.setObjectName("nameEdit")
+        self.verticalLayout.addWidget(self.nameEdit)
+        self.roastEdit = QtWidgets.QLineEdit(AddEditCoffeeForm)
+        self.roastEdit.setPlaceholderText("Степень обжарки")
+        self.roastEdit.setObjectName("roastEdit")
+        self.verticalLayout.addWidget(self.roastEdit)
+        self.typeEdit = QtWidgets.QLineEdit(AddEditCoffeeForm)
+        self.typeEdit.setPlaceholderText("Молотый/в зернах")
+        self.typeEdit.setObjectName("typeEdit")
+        self.verticalLayout.addWidget(self.typeEdit)
+        self.tasteEdit = QtWidgets.QLineEdit(AddEditCoffeeForm)
+        self.tasteEdit.setPlaceholderText("Описание вкуса")
+        self.tasteEdit.setObjectName("tasteEdit")
+        self.verticalLayout.addWidget(self.tasteEdit)
+        self.priceEdit = QtWidgets.QLineEdit(AddEditCoffeeForm)
+        self.priceEdit.setPlaceholderText("Цена")
+        self.priceEdit.setObjectName("priceEdit")
+        self.verticalLayout.addWidget(self.priceEdit)
+        self.volumeEdit = QtWidgets.QLineEdit(AddEditCoffeeForm)
+        self.volumeEdit.setPlaceholderText("Объем упаковки")
+        self.volumeEdit.setObjectName("volumeEdit")
+        self.verticalLayout.addWidget(self.volumeEdit)
+        self.saveButton = QtWidgets.QPushButton(AddEditCoffeeForm)
+        self.saveButton.setObjectName("saveButton")
+        self.verticalLayout.addWidget(self.saveButton)
+        self.cancelButton = QtWidgets.QPushButton(AddEditCoffeeForm)
+        self.cancelButton.setObjectName("cancelButton")
+        self.verticalLayout.addWidget(self.cancelButton)
+
+        self.retranslateUi(AddEditCoffeeForm)
+        QtCore.QMetaObject.connectSlotsByName(AddEditCoffeeForm)
+
+    def retranslateUi(self, AddEditCoffeeForm):
+        _translate = QtCore.QCoreApplication.translate
+        AddEditCoffeeForm.setWindowTitle(_translate("AddEditCoffeeForm", "Add/Edit Coffee"))
+        self.saveButton.setText(_translate("AddEditCoffeeForm", "Сохранить"))
+        self.cancelButton.setText(_translate("AddEditCoffeeForm", "Отмена"))
